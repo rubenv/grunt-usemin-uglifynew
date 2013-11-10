@@ -2,6 +2,34 @@
 
 > Usemin uglify task that reuses existing .min files.
 
+## Usage example
+
+Require this plugin:
+
+```
+var uglifyNew = require('grunt-usemin-uglifynew');
+```
+
+Configure the `useminPrepare` task like this:
+
+```
+useminPrepare: {
+    html: 'src/index.html',
+    options: {
+        dest: 'dist',
+        flow: {
+            steps: {
+                js: [uglifyNew, 'concat'],
+                css: ['concat', 'cssmin']
+            },
+            post: []
+        }
+    }
+}
+```
+
+This flips the order of compilation: each file is minified independently first, concatenation happens last. Files that have already been minified (e.g. libraries that ship a `.min.js` file) won't be minified again.
+
 ## License 
 
     (The MIT License)
