@@ -4,6 +4,12 @@
 
 ## Usage example
 
+Add to your project:
+
+```
+npm install --save-dev grunt-usemin-uglifynew
+```
+
 Require this plugin:
 
 ```
@@ -12,7 +18,7 @@ var uglifyNew = require('grunt-usemin-uglifynew');
 
 Configure the `useminPrepare` task like this:
 
-```
+```js
 useminPrepare: {
     html: 'src/index.html',
     options: {
