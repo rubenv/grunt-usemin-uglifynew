@@ -1,6 +1,6 @@
 {
   "name": "grunt-usemin-uglifynew",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Usemin uglify task that reuses existing .min files.",
   "main": "index.js",
   "scripts": {
